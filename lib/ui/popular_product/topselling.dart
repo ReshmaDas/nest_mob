@@ -8,6 +8,7 @@ class TopSellingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       itemCount: topsellingItems.length,
       itemBuilder: (context, index) {
         final TopSelling items = topsellingItems[index];

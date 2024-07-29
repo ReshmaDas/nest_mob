@@ -6,26 +6,60 @@ class MyTab extends GetxController with GetSingleTickerProviderStateMixin {
 
   final List<Tab> myTabs = <Tab>[
     Tab(
-      iconMargin: EdgeInsets.all(2),
-      text: 'All',
+      child: Text(
+        'All',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
+    ),
+    const Tab(
+      child: Text(
+        'Milk & Dairies',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
+    ),
+    const Tab(
+      child: Text(
+        'Coffees & Teas',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
     ),
     Tab(
-      text: 'Milk & Dairies',
+      child: Text(
+        'Pet Foods',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
     ),
     Tab(
-      text: 'Coffees & Teas',
+      child: Text(
+        'Meats',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
     ),
     Tab(
-      text: 'Pet Foods',
+      child: Text(
+        'Vegetables',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
     ),
     Tab(
-      text: 'Meats',
-    ),
-    Tab(
-      text: 'Vegetables',
-    ),
-    Tab(
-      text: 'Fruits',
+      child: Text(
+        'Fruits',
+        style: TextStyle(fontSize: 12),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      ),
     ),
   ];
   @override
