@@ -2,6 +2,7 @@ import 'package:banner_carousel/banner_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nest_mart_and_grocery/data/banner_carousel.dart';
+import 'package:nest_mart_and_grocery/data/shoByCategoryModel.dart';
 import 'package:nest_mart_and_grocery/ui/components/mytab2.dart';
 import 'package:nest_mart_and_grocery/ui/components/tabController.dart';
 import 'package:nest_mart_and_grocery/ui/popular_product/allProducts.dart';
@@ -200,6 +201,60 @@ class PageOne extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Shop by Categories',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, // number of items in each row
+                mainAxisSpacing: 8.0, // spacing between rows
+                crossAxisSpacing: 8.0, // spacing between columns
+              ),
+              itemCount: items.length,
+              itemBuilder: (context, index) {
+                final CategoryList items2 = items[index];
+                return Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color.fromARGB(255, 245, 222, 249),
+                    ),
+                    child: Column(
+                      children: [
+                        Center(
+                          child: Container(
+                            height: 30,
+                            width: 30,
+                            child: Image.asset(items2.image),
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            items2.name,
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
             SizedBox(height: 5),
             Container(
